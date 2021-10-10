@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,53 +9,112 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--SignInVC-->
+        <scene sceneID="ekx-cd-nAX">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animal_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController title="SignInVC" id="0pb-m4-BnD" customClass="SignInVC" customModule="Animal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D81-lH-ZBQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HS4-wk-Dz8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="LVg-HJ-R9F">
+                                <rect key="frame" x="105" y="65" width="216.5" height="812"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTz-FU-6J2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="111.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AURA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff0-bK-4CC">
+                                        <rect key="frame" x="0.0" y="0.0" width="216.5" height="112"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="80"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cute_dog" translatesAutoresizingMaskIntoConstraints="NO" id="aGn-ru-utZ">
-                                        <rect key="frame" x="0.0" y="141.5" width="414" height="111"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MA-8L-Aqc">
-                                        <rect key="frame" x="0.0" y="282.5" width="414" height="111.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN6-h0-v84">
+                                        <rect key="frame" x="0.0" y="175" width="216.5" height="112"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dix-zC-8NP">
-                                        <rect key="frame" x="0.0" y="424" width="414" height="111.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                        <state key="normal" title="Pick Image">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QRO-O8-txw"/>
-                                        </connections>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPe-G4-yVB">
+                                        <rect key="frame" x="0.0" y="350" width="216.5" height="112"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AS9-Ek-JQ8">
+                                        <rect key="frame" x="0.0" y="525" width="216.5" height="112"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSr-0q-XvE">
+                                        <rect key="frame" x="0.0" y="700" width="216.5" height="112"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Submit">
+                                            <fontDescription key="titleFontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="33"/>
+                                            <color key="baseForegroundColor" red="0.95694977049999996" green="0.9683577418" blue="0.98431712390000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" red="0.42850077149999999" green="0.1963293254" blue="0.69023662809999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EKd-26-OyI">
-                                        <rect key="frame" x="0.0" y="565.5" width="414" height="111"/>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i3d-FV-gSy"/>
+                        <color key="backgroundColor" red="0.95694977049999996" green="0.9683577418" blue="0.98431712390000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <outlet property="Submit" destination="OSr-0q-XvE" id="1Ic-RV-Nmf"/>
+                        <segue destination="s3E-ey-wN8" kind="showDetail" id="utz-1n-orT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OlQ-Ps-JLp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2881" y="454"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ysK-11-Wva">
+            <objects>
+                <tabBarController id="s3E-ey-wN8" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PqF-aT-S0T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="RPo-lu-7oE"/>
+                        <segue destination="Z73-ya-yhh" kind="relationship" relationship="viewControllers" id="S8B-VA-3lB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDm-JQ-hvQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2028" y="453"/>
+        </scene>
+        <!--My Status-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIScrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HS4-wk-Dz8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTz-FU-6J2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="70" translatesAutoresizingMaskIntoConstraints="NO" id="aGn-ru-utZ">
+                                        <rect key="frame" x="0.0" y="263" width="414" height="233"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-Nv-gs9">
-                                        <rect key="frame" x="0.0" y="706.5" width="414" height="111.5"/>
-                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prediction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MA-8L-Aqc">
+                                        <rect key="frame" x="0.0" y="526" width="414" height="233"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.95694977049999996" green="0.9683577418" blue="0.98431712390000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HS4-wk-Dz8" secondAttribute="trailing" id="0n7-Tp-FXH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HS4-wk-Dz8" secondAttribute="bottom" id="RKR-al-akB"/>
@@ -63,25 +122,38 @@
                             <constraint firstItem="HS4-wk-Dz8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y8k-fr-Iwm"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="My Status" image="brain.head.profile" catalog="system" id="Uhi-rS-KXc"/>
                     <connections>
-                        <outlet property="Result1" destination="EKd-26-OyI" id="bet-8K-AEx"/>
-                        <outlet property="Result2" destination="zMy-Nv-gs9" id="p9d-Sf-8mJ"/>
                         <outlet property="answerLabel" destination="2MA-8L-Aqc" id="i4P-lS-PeN"/>
-                        <outlet property="buttonMain" destination="Dix-zC-8NP" id="z0u-t3-6I9"/>
                         <outlet property="imageMain" destination="aGn-ru-utZ" id="OBH-Yz-jEx"/>
                         <outlet property="topLabel" destination="pTz-FU-6J2" id="0OY-Cv-TKI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="94"/>
+            <point key="canvasLocation" x="-1207" y="453"/>
+        </scene>
+        <!--ResourcesVC-->
+        <scene sceneID="KVi-Ir-Z9r">
+            <objects>
+                <viewController title="ResourcesVC" id="Z73-ya-yhh" customClass="ResourcesVC" customModule="Animal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="31n-qk-Y1o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CEa-1T-2JW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Resources" image="doc.text" catalog="system" id="0Qu-P1-ckz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ck-i1-yem" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="453"/>
         </scene>
     </scenes>
     <resources>
-        <image name="cute_dog" width="1524" height="1016"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="70" width="313" height="376.5"/>
+        <image name="brain.head.profile" catalog="system" width="114" height="128"/>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

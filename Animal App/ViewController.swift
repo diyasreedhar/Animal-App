@@ -65,7 +65,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         answerLabel.text = "Checking..."
         let imageJPG = image.jpegData(compressionQuality: 0.0034)
         processAPI1(image:imageJPG!)
-        processAPI2(image:imageJPG!)
+        //processAPI2(image:imageJPG!)
         //buttonMain.isHidden = false
         //buttonSecond.isHidden = false
         
@@ -106,6 +106,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
 
                }
             self.buttonMain.isHidden = false
+            }
             
         }
         
@@ -137,10 +138,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
 
                    }
                 self.buttonMain.isHidden = false
-                
             }
-    }
-
-    
-    
+        }
 }
+
