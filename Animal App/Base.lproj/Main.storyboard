@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0pb-m4-BnD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -55,7 +55,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i3d-FV-gSy"/>
-                        <color key="backgroundColor" red="0.95694977049999996" green="0.9683577418" blue="0.98431712390000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="Submit" destination="OSr-0q-XvE" id="1Ic-RV-Nmf"/>
@@ -104,13 +104,11 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="70" translatesAutoresizingMaskIntoConstraints="NO" id="aGn-ru-utZ">
                                         <rect key="frame" x="0.0" y="263" width="414" height="233"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prediction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MA-8L-Aqc">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Diagnosis1" translatesAutoresizingMaskIntoConstraints="NO" id="ogo-g3-4pV">
                                         <rect key="frame" x="0.0" y="526" width="414" height="233"/>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="40"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </imageView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -124,7 +122,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Status" image="brain.head.profile" catalog="system" id="Uhi-rS-KXc"/>
                     <connections>
-                        <outlet property="answerLabel" destination="2MA-8L-Aqc" id="i4P-lS-PeN"/>
                         <outlet property="imageMain" destination="aGn-ru-utZ" id="OBH-Yz-jEx"/>
                         <outlet property="topLabel" destination="pTz-FU-6J2" id="0OY-Cv-TKI"/>
                     </connections>
@@ -149,9 +146,56 @@
             </objects>
             <point key="canvasLocation" x="-338" y="453"/>
         </scene>
+        <!--My Status-->
+        <scene sceneID="iAc-QC-zEW">
+            <objects>
+                <viewController id="XwP-Cf-mMp" customClass="ViewController" customModule="Animal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nfy-Oj-Ht6" customClass="UIScrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3nM-gI-dZ3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ2-7M-kmz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="252.5"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="70" translatesAutoresizingMaskIntoConstraints="NO" id="hiT-fL-lvd">
+                                        <rect key="frame" x="0.0" y="282.5" width="414" height="253"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Diagnosis1" translatesAutoresizingMaskIntoConstraints="NO" id="dta-MR-REC">
+                                        <rect key="frame" x="0.0" y="565.5" width="414" height="252.5"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MMd-kl-g7y"/>
+                        <color key="backgroundColor" red="0.95694977049999996" green="0.9683577418" blue="0.98431712390000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="MMd-kl-g7y" firstAttribute="trailing" secondItem="3nM-gI-dZ3" secondAttribute="trailing" id="CZs-1b-aa1"/>
+                            <constraint firstItem="MMd-kl-g7y" firstAttribute="bottom" secondItem="3nM-gI-dZ3" secondAttribute="bottom" id="Joe-yx-rhv"/>
+                            <constraint firstItem="3nM-gI-dZ3" firstAttribute="leading" secondItem="MMd-kl-g7y" secondAttribute="leading" id="M55-PN-3c5"/>
+                            <constraint firstItem="3nM-gI-dZ3" firstAttribute="top" secondItem="MMd-kl-g7y" secondAttribute="top" id="rT8-AP-xBw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Status" image="brain.head.profile" catalog="system" id="Rdl-tn-RhS"/>
+                    <connections>
+                        <outlet property="imageMain" destination="hiT-fL-lvd" id="kJN-yd-vq7"/>
+                        <outlet property="topLabel" destination="NZ2-7M-kmz" id="uoh-JK-UU7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJb-Fo-1Br" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1207" y="1113"/>
+        </scene>
     </scenes>
     <resources>
         <image name="70" width="313" height="376.5"/>
+        <image name="Diagnosis1" width="251" height="423"/>
         <image name="brain.head.profile" catalog="system" width="114" height="128"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
